@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lines to Content Layout Animation | Roberto Losa</title>
+    <!-- Generate Meta Tags via https://www.opengraph.xyz -->
+    <meta name="description" content="">
+    <meta name="author" content="Roberto Losa">
+    <link rel="shortcut icon" href="/favicon.824cf0c5.ico">
+    <link rel="stylesheet" type="text/css" href="/index.d046a61c.css">
+    <script>document.documentElement.className = "js";
+var supportsCssVars = function() {
+    var e, t = document.createElement("style");
+    return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e;
+};
+supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");
+
+</script>
+  </head>
+  <body class="loading">
+    <main>
+      <h1>Lines to Content Layout Animation</h1>
+      <a>Link</a>
+      <div class="intro">
+        <div class="row row--1">
+          <span class="row__text oh"><span data-direction="top">Facts do</span></span>
+          <span class="row__text oh"><span data-direction="right">not</span></span>
+        </div>
+        <div class="row row--2">
+          <span class="row__text oh"><span data-direction="left">cease</span></span>
+          <span class="row__text oh"><span data-direction="bottom">to exist</span></span>
+        </div>
+        <div class="row row--3">
+          <span class="row__text oh"><span data-direction="right">because</span></span>
+          <span data-direction="right" class="row__text oh"><span data-direction="right">they</span></span>
+        </div>
+        <div class="row row--4">
+          <span class="row__text oh"><span data-direction="bottom">are ignored</span></span>
+        </div>
+        <div class="image image--up">
+          <div class="image__inner" style="background-image: url(&quot;1.a45131b3.jpg&quot;)" data-direction="right"></div>
+        </div>
+        <div class="image image--down">
+          <div class="image__inner" style="background-image: url(&quot;2.cccf08ef.jpg&quot;)" data-direction="left"></div>
+        </div>
+      </div>
+    </main>
+    <svg class="cursor" width="100" height="100" viewbox="0 0 100 100">
+      <defs>
+        <filter id="cursor-filter" x="-50%" y="-50%" width="200%" height="200%" filterunits="objectBoundingBox">
+          <feturbulence type="fractalNoise" basefrequency="0" numoctaves="1" result="warp"></feturbulence>
+          <feoffset dx="0" result="warpOffset"></feoffset>
+          <fedisplacementmap xchannelselector="R" ychannelselector="G" scale="40" in="SourceGraphic" in2="warpOffset"></fedisplacementmap>
+        </filter>
+      </defs>
+      <circle class="cursor__inner" cx="50" cy="50" r="10"></circle>
+    </svg>
+    <svg class="cursor" width="100" height="100" viewbox="0 0 100 100" data-amt="0.15" data-radius-enter="40">
+      <circle class="cursor__inner" cx="50" cy="50" r="10"></circle>
+    </svg>
+
+    <script src="/index.739bf03c.js" defer=""></script>
+  </body>
+</html>
