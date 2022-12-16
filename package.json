@@ -16,6 +16,8 @@
     "parcel": "^2.8.2"
   },
   "devDependencies": {
+    "@parcel/packager-raw-url": "^2.8.2",
+    "@parcel/transformer-webmanifest": "^2.8.2",
     "prettier": "^2.8.1",
     "prettier-plugin-packagejson": "^2.3.0"
   }
