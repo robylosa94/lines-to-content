@@ -95,6 +95,28 @@ a:focus-visible {
   outline: 2px solid red;
 }
 
+.hover-line {
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+}
+
+.hover-line:before {
+  content: "";
+  height: 1px;
+  width: 100%;
+  transform-origin: 0%;
+  background: currentColor;
+  transition: transform .3s;
+  position: absolute;
+  top: 92%;
+}
+
+.hover-line:hover:before {
+  transform-origin: 100%;
+  transform: scaleX(0);
+}
+
 .unbutton {
   font: inherit;
   cursor: pointer;
@@ -115,17 +137,30 @@ main {
   position: relative;
 }
 
-.title {
-  padding: var(--padding-hor) calc(var(--padding-ver)  + .6vw);
+.frame {
+  text-align: center;
   text-transform: uppercase;
+  padding: var(--padding-hor) calc(var(--padding-ver)  + .6vw);
   z-index: 100;
+  flex-direction: column;
   grid-area: 1 / 1 / 2 / 2;
   align-self: start;
-  margin: 0;
-  font-size: 1rem;
-  font-weight: normal;
   display: flex;
   position: relative;
+}
+
+.frame__title {
+  margin: 1rem 0;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.frame__links {
+  display: inline-block;
+}
+
+.frame__links a {
+  margin: 0 .5rem;
 }
 
 .intro, .content-wrap {
@@ -325,6 +360,24 @@ main {
 
 .cursor {
   display: none;
+}
+
+@media screen and (min-width: 53em) {
+  .frame {
+    flex-direction: row;
+  }
+
+  .frame__title {
+    margin-top: 0;
+  }
+
+  .frame__links {
+    margin-right: 8vw;
+  }
+
+  .content__row--text {
+    padding: calc(var(--padding-hor)  + 4rem) 0 2.5rem;
+  }
 }
 
 @media (any-pointer: fine) {
